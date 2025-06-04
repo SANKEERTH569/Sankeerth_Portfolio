@@ -23,38 +23,38 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="reveal" data-direction="left">
             <div className="card-glass">
-              <h3 className="font-display text-2xl font-bold mb-4">Professional Summary</h3>
+              <h3 className="font-display text-2xl font-bold mb-4">Who I Am</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Results-oriented Computer Science Engineering student specializing in IoT and Full-Stack Development, 
-                with demonstrated success in building scalable applications and leveraging data science for actionable insights.
+                I'm a passionate full-stack developer with a keen eye for design and a love for creating 
+                meaningful digital experiences. With over 5 years of experience in web development, 
+                I've had the privilege of working with startups and established companies alike.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Proficient in Python, Java, JavaScript frameworks (React, Node.js), and cloud platforms. 
-                Eager to contribute technical expertise and problem-solving skills to challenging software engineering 
-                roles at a leading technology company.
+                My journey in tech started with curiosity and has evolved into a career where I get to 
+                solve complex problems and bring creative ideas to life through code.
               </p>
             </div>
           </div>
           
           <div className="reveal" data-direction="right">
             <div className="card-glass">
-              <h3 className="font-display text-2xl font-bold mb-6">Key Highlights</h3>
+              <h3 className="font-display text-2xl font-bold mb-6">What I Do</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Streamlined data collection and reporting procedures, reducing processing time by 20%</span>
+                  <span className="text-muted-foreground">Design and develop responsive web applications</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Implemented automation solutions resulting in 15% increase in productivity</span>
+                  <span className="text-muted-foreground">Create intuitive user interfaces and experiences</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Collaborated with 3+ cross-functional teams on strategic projects</span>
+                  <span className="text-muted-foreground">Optimize applications for performance and scalability</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Achieved 89% accuracy in customer churn prediction models</span>
+                  <span className="text-muted-foreground">Collaborate with teams to deliver high-quality solutions</span>
                 </li>
               </ul>
             </div>

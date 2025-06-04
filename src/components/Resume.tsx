@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { Calendar, MapPin, Award, Briefcase } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 import { useRevealAnimation } from '../utils/animations';
 
 const Resume: React.FC = () => {
@@ -13,55 +13,41 @@ const Resume: React.FC = () => {
   
   const education = [
     {
-      institution: "Sathyabama Institute of Science and Technology",
-      degree: "B.E., Computer Science Engineering (Specialization: IoT)",
-      period: "June 2022 - Present",
-      location: "Chennai, India",
-      grade: "CGPA: 8.15"
+      institution: "University of Technology",
+      degree: "Bachelor of Science in Computer Science",
+      period: "2018 - 2022",
+      location: "New York, NY"
     },
     {
-      institution: "Tirumala Junior Kalasala",
-      degree: "Board of Intermediate Education - MPC",
-      period: "2018 - August 2021",
-      location: "A.P, India",
-      grade: "Percentage: 86.7%"
+      institution: "Tech Academy",
+      degree: "Full-Stack Web Development Bootcamp",
+      period: "2017 - 2018",
+      location: "San Francisco, CA"
     }
   ];
   
   const workExperience = [
     {
-      company: "Centre For Remote Sensing and Geoinformatics (SIST)",
-      position: "Geospatial Technology Intern",
-      period: "September 2024",
-      location: "In-Office",
+      company: "Tech Solutions Inc.",
+      position: "Senior Full-Stack Developer",
+      period: "2022 - Present",
+      location: "Remote",
       achievements: [
-        "Streamlined data collection and reporting procedures, reducing processing time by 20%",
-        "Implemented process improvements and automation solutions, resulting in 15% increase in productivity",
-        "Collaborated with 3+ cross-functional teams to gather requirements and define project scopes",
-        "Produced 15+ comprehensive reports and presentations summarizing findings and recommendations",
-        "Conducted in-depth market research and analysis, identifying 10+ key trends and insights"
+        "Led development of 3 major web applications serving 10,000+ users",
+        "Improved application performance by 40% through optimization",
+        "Mentored 5 junior developers and conducted code reviews"
       ]
-    }
-  ];
-  
-  const certifications = [
-    {
-      name: "Oracle Fusion Cloud Applications HCM Foundations Associate",
-      issuer: "Oracle",
-      date: "March 2023",
-      description: "Validated foundational knowledge of Oracle Fusion HCM Cloud modules and core HR configurations"
     },
     {
-      name: "Software Conceptual Design",
-      issuer: "NPTEL",
-      date: "March 2023",
-      description: "Solidified understanding of software design principles, architectural patterns, and system modeling"
-    },
-    {
-      name: "Data Science",
-      issuer: "Teachnook",
-      date: "March 2023",
-      description: "Mastered core data science techniques including data preprocessing, visualization, and supervised ML model development"
+      company: "StartupXYZ",
+      position: "Frontend Developer",
+      period: "2020 - 2022",
+      location: "Austin, TX",
+      achievements: [
+        "Built responsive web applications using React and TypeScript",
+        "Collaborated with design team to implement pixel-perfect UIs",
+        "Reduced bundle size by 30% through code splitting and optimization"
+      ]
     }
   ];
   
@@ -70,7 +56,7 @@ const Resume: React.FC = () => {
       <div className="text-center mb-16">
         <h2 className="section-title reveal" data-direction="up">Resume</h2>
         <p className="section-subtitle reveal" data-direction="up" style={{ transitionDelay: '0.1s' }}>
-          My educational background, work experience, and certifications
+          My educational background and work experience
         </p>
       </div>
       
@@ -89,14 +75,9 @@ const Resume: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-lg font-medium mb-2">{edu.degree}</p>
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-muted-foreground">
-                  <div className="flex items-center">
-                    <MapPin className="w-4 h-4 mr-1" />
-                    {edu.location}
-                  </div>
-                  <div className="font-medium text-primary mt-1 sm:mt-0">
-                    {edu.grade}
-                  </div>
+                <div className="flex items-center text-muted-foreground">
+                  <MapPin className="w-4 h-4 mr-1" />
+                  {edu.location}
                 </div>
               </div>
             ))}
@@ -120,7 +101,7 @@ const Resume: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-center text-muted-foreground mb-4">
-                  <Briefcase className="w-4 h-4 mr-1" />
+                  <MapPin className="w-4 h-4 mr-1" />
                   {work.location}
                 </div>
                 <ul className="space-y-2">
@@ -131,24 +112,6 @@ const Resume: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        {/* Certifications */}
-        <div className="reveal" data-direction="up" style={{ transitionDelay: '0.4s' }}>
-          <h3 className="font-display text-2xl font-bold mb-8 text-center">Certifications</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <div key={index} className="card-glass">
-                <div className="flex items-start mb-3">
-                  <Award className="w-5 h-5 text-primary mt-1 mr-2 flex-shrink-0" />
-                  <h4 className="font-display text-lg font-semibold leading-tight">{cert.name}</h4>
-                </div>
-                <p className="text-primary font-medium mb-2">{cert.issuer}</p>
-                <p className="text-muted-foreground text-sm mb-3">{cert.date}</p>
-                <p className="text-muted-foreground text-sm">{cert.description}</p>
               </div>
             ))}
           </div>

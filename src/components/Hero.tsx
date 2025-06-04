@@ -20,28 +20,27 @@ const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="reveal" data-direction="up">
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-            <span className="highlight-gradient">Balabhadra Sankeerth</span>
+            <span className="highlight-gradient">John Doe</span>
           </h1>
         </div>
         
         <div className="reveal" data-direction="up" style={{ transitionDelay: '0.2s' }}>
           <h2 className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 font-medium">
-            Computer Science Engineer | IoT Specialist | Full-Stack Developer
+            Full-Stack Developer & UI/UX Designer
           </h2>
         </div>
         
         <div className="reveal" data-direction="up" style={{ transitionDelay: '0.4s' }}>
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Results-oriented engineering student passionate about building scalable applications, 
-            leveraging data science for actionable insights, and creating innovative IoT solutions 
-            that make a real-world impact.
+            Passionate about creating beautiful, functional, and user-centered digital experiences. 
+            I bring ideas to life through code and design.
           </p>
         </div>
         
         <div className="reveal" data-direction="up" style={{ transitionDelay: '0.6s' }}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <a 
-              href="mailto:sankeerthbalabhadra@gmail.com" 
+              href="mailto:john@example.com" 
               className="btn-primary inline-flex items-center gap-2 px-8 py-3 text-lg"
             >
               <Mail className="w-5 h-5" />

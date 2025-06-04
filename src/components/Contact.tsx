@@ -15,31 +15,31 @@ const Contact: React.FC = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
-      value: "sankeerthbalabhadra@gmail.com",
-      href: "mailto:sankeerthbalabhadra@gmail.com"
+      value: "john@example.com",
+      href: "mailto:john@example.com"
     },
     {
       icon: <Phone className="w-5 h-5" />,
       label: "Phone",
-      value: "+91 9398958886",
-      href: "tel:+919398958886"
+      value: "+1 (555) 123-4567",
+      href: "tel:+15551234567"
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
       label: "LinkedIn",
-      value: "LinkedIn Profile",
+      value: "linkedin.com/in/johndoe",
       href: "#"
     },
     {
       icon: <Github className="w-5 h-5" />,
       label: "GitHub",
-      value: "GitHub Profile",
+      value: "github.com/johndoe",
       href: "#"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       label: "Location",
-      value: "Chennai, India",
+      value: "New York, NY",
       href: "#"
     }
   ];
@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="section-title reveal" data-direction="up">Get In Touch</h2>
           <p className="section-subtitle reveal" data-direction="up" style={{ transitionDelay: '0.1s' }}>
-            Let's connect and discuss opportunities to work together
+            Let's connect and discuss opportunities
           </p>
         </div>
         
@@ -83,19 +83,19 @@ const Contact: React.FC = () => {
               <h3 className="font-display text-2xl font-bold mb-6">Let's Work Together</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 I'm always interested in new opportunities and exciting projects. 
-                Whether you're looking for a full-stack developer, a data science enthusiast, 
-                or someone passionate about IoT solutions, I'd love to hear from you.
+                Whether you need a website, web application, or just want to chat about tech, 
+                I'd love to hear from you.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Feel free to reach out through any of the contact methods listed, 
                 and I'll get back to you as soon as possible.
               </p>
               <a 
-                href="mailto:sankeerthbalabhadra@gmail.com" 
+                href="mailto:john@example.com" 
                 className="btn-primary inline-flex items-center gap-2"
               >
                 <Mail className="w-4 h-4" />
-                Send Email
+                Send Message
               </a>
             </div>
           </div>
