@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, MapPin } from 'lucide-react';
 import { useRevealAnimation } from '../utils/animations';
 
 const Contact: React.FC = () => {
@@ -11,130 +11,93 @@ const Contact: React.FC = () => {
     return cleanup;
   }, []);
   
+  const contactInfo = [
+    {
+      icon: <Mail className="w-5 h-5" />,
+      label: "Email",
+      value: "sankeerthbalabhadra@gmail.com",
+      href: "mailto:sankeerthbalabhadra@gmail.com"
+    },
+    {
+      icon: <Phone className="w-5 h-5" />,
+      label: "Phone",
+      value: "+91 9398958886",
+      href: "tel:+919398958886"
+    },
+    {
+      icon: <Linkedin className="w-5 h-5" />,
+      label: "LinkedIn",
+      value: "LinkedIn Profile",
+      href: "#"
+    },
+    {
+      icon: <Github className="w-5 h-5" />,
+      label: "GitHub",
+      value: "GitHub Profile",
+      href: "#"
+    },
+    {
+      icon: <MapPin className="w-5 h-5" />,
+      label: "Location",
+      value: "Chennai, India",
+      href: "#"
+    }
+  ];
+  
   return (
-    <section id="contact" className="section-container bg-secondary/50">
-      <div className="text-center mb-16">
-        <h2 className="section-title reveal" data-direction="up">Get In Touch</h2>
-        <p className="section-subtitle reveal" data-direction="up" style={{ transitionDelay: '0.1s' }}>
-          Have a project in mind or want to discuss potential opportunities? Let's connect!
-        </p>
-      </div>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <div className="reveal" data-direction="left">
-          <div className="card-glass h-full">
-            <h3 className="font-display text-2xl font-bold mb-6">Contact Information</h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="p-2 bg-blue-100 rounded-lg text-primary mt-1">
-                  <Phone size={20} />
-                </div>
-                <div>
-                  <h4 className="font-medium mb-1">Phone</h4>
-                  <p className="text-muted-foreground">+91 9398958886</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="p-2 bg-blue-100 rounded-lg text-primary mt-1">
-                  <Mail size={20} />
-                </div>
-                <div>
-                  <h4 className="font-medium mb-1">Email</h4>
-                  <p className="text-muted-foreground">
-                    <a href="mailto:sankeerthbalabhadra@gmail.com" className="hover:text-primary transition-colors">
-                      sankeerthbalabhadra@gmail.com
-                    </a>
-                  </p>
-                  <p className="text-muted-foreground">
-                    <a href="mailto:42732006@sathyabama.ac.in" className="hover:text-primary transition-colors">
-                      42732006@sathyabama.ac.in
-                    </a>
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="p-2 bg-blue-100 rounded-lg text-primary mt-1">
-                  <MapPin size={20} />
-                </div>
-                <div>
-                  <h4 className="font-medium mb-1">Location</h4>
-                  <p className="text-muted-foreground">Chennai, Tamil Nadu, India</p>
-                </div>
+    <section id="contact" className="section-container bg-secondary/30">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="section-title reveal" data-direction="up">Get In Touch</h2>
+          <p className="section-subtitle reveal" data-direction="up" style={{ transitionDelay: '0.1s' }}>
+            Let's connect and discuss opportunities to work together
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="reveal" data-direction="left">
+            <div className="card-glass">
+              <h3 className="font-display text-2xl font-bold mb-6">Contact Information</h3>
+              <div className="space-y-4">
+                {contactInfo.map((contact, index) => (
+                  <a 
+                    key={index}
+                    href={contact.href}
+                    className="flex items-center p-4 rounded-lg border border-border hover:bg-secondary/50 transition-colors group"
+                  >
+                    <div className="text-primary mr-4 group-hover:scale-110 transition-transform">
+                      {contact.icon}
+                    </div>
+                    <div>
+                      <p className="font-medium">{contact.label}</p>
+                      <p className="text-muted-foreground">{contact.value}</p>
+                    </div>
+                  </a>
+                ))}
               </div>
             </div>
           </div>
-        </div>
-        
-        <div className="reveal" data-direction="right">
-          <div className="card-glass">
-            <h3 className="font-display text-2xl font-bold mb-6">Send Me a Message</h3>
-            
-            <form className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder="Your name"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder="Your email"
-                    required
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-1">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  placeholder="Subject"
-                  required
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-1">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
-                  placeholder="Your message"
-                  required
-                ></textarea>
-              </div>
-              
-              <button
-                type="submit"
-                className="btn-primary w-full flex items-center justify-center gap-2"
+          
+          <div className="reveal" data-direction="right">
+            <div className="card-glass">
+              <h3 className="font-display text-2xl font-bold mb-6">Let's Work Together</h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                I'm always interested in new opportunities and exciting projects. 
+                Whether you're looking for a full-stack developer, a data science enthusiast, 
+                or someone passionate about IoT solutions, I'd love to hear from you.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Feel free to reach out through any of the contact methods listed, 
+                and I'll get back to you as soon as possible.
+              </p>
+              <a 
+                href="mailto:sankeerthbalabhadra@gmail.com" 
+                className="btn-primary inline-flex items-center gap-2"
               >
-                <Send size={16} />
-                Send Message
-              </button>
-            </form>
+                <Mail className="w-4 h-4" />
+                Send Email
+              </a>
+            </div>
           </div>
         </div>
       </div>

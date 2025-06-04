@@ -1,6 +1,5 @@
 
 import React, { useEffect } from 'react';
-import { Phone, Mail, Github, Linkedin } from 'lucide-react';
 import { useRevealAnimation } from '../utils/animations';
 
 const About: React.FC = () => {
@@ -12,62 +11,53 @@ const About: React.FC = () => {
   }, []);
   
   return (
-    <section id="about" className="section-container bg-secondary/50">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <div className="reveal" data-direction="left">
-            <h2 className="section-title highlight-gradient">About Me</h2>
-            <p className="text-lg mb-6">
-              I'm a Computer Science student specializing in Internet of Things at Sathyabama Institute Of Science And Technology, Chennai.
-              I'm passionate about using technology to solve real-world problems and continuously expanding my skill set in various domains.
-            </p>
-            <p className="text-lg mb-6">
-              My academic journey has equipped me with a strong foundation in computer science fundamentals,
-              while my personal projects have allowed me to apply this knowledge in practical scenarios.
-            </p>
-            <p className="text-lg mb-6">
-              I'm particularly interested in Machine Learning, IoT, and Full Stack Web Development, and I'm always eager to collaborate on innovative projects.
-            </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              <div className="flex items-center gap-2">
-                <Phone size={18} className="text-primary" />
-                <span>+91 9398958886</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail size={18} className="text-primary" />
-                <a href="mailto:sankeerthbalabhadra@gmail.com" className="hover:text-primary transition-colors">
-                  sankeerthbalabhadra@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Github size={18} className="text-primary" />
-                <a href="#" className="hover:text-primary transition-colors">
-                  GitHub Profile
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Linkedin size={18} className="text-primary" />
-                <a href="#" className="hover:text-primary transition-colors">
-                  LinkedIn Profile
-                </a>
-              </div>
-            </div>
-            
-            <a href="#resume" className="btn-primary">
-              View My Resume
-            </a>
-          </div>
+    <section id="about" className="section-container bg-secondary/30">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="section-title reveal" data-direction="up">About Me</h2>
+          <p className="section-subtitle reveal" data-direction="up" style={{ transitionDelay: '0.1s' }}>
+            Get to know more about my background and passion for technology
+          </p>
         </div>
         
-        <div className="reveal" data-direction="right">
-          <div className="relative">
-            <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500 to-indigo-600 p-1">
-              <div className="w-full h-full bg-white rounded-xl flex items-center justify-center">
-                <div className="text-3xl font-display font-bold highlight-gradient">BS</div>
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="reveal" data-direction="left">
+            <div className="card-glass">
+              <h3 className="font-display text-2xl font-bold mb-4">Professional Summary</h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Results-oriented Computer Science Engineering student specializing in IoT and Full-Stack Development, 
+                with demonstrated success in building scalable applications and leveraging data science for actionable insights.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Proficient in Python, Java, JavaScript frameworks (React, Node.js), and cloud platforms. 
+                Eager to contribute technical expertise and problem-solving skills to challenging software engineering 
+                roles at a leading technology company.
+              </p>
             </div>
-            <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-blue-200 rounded-full blur-3xl -z-10 opacity-50"></div>
+          </div>
+          
+          <div className="reveal" data-direction="right">
+            <div className="card-glass">
+              <h3 className="font-display text-2xl font-bold mb-6">Key Highlights</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-muted-foreground">Streamlined data collection and reporting procedures, reducing processing time by 20%</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-muted-foreground">Implemented automation solutions resulting in 15% increase in productivity</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-muted-foreground">Collaborated with 3+ cross-functional teams on strategic projects</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-muted-foreground">Achieved 89% accuracy in customer churn prediction models</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
